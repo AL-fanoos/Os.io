@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الفانوس للتجارة العامة - حلول الطاقة المتكاملة</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* الألوان الأساسية الجديدة */
+        :root {
+            --primary-color: #0066cc; /* أزرق بدلاً من الأحمر */
+            --secondary-color: #004d99;
+            --accent-color: #00cc66; /* أخضر للطاقة المتجددة */
+            --light-bg: #f0f8ff; /* خلفية زرقاء فاتحة */
+            --text-color: #333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #ffffff 0%, var(--light-bg) 100%);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow-x: hidden;
+            padding: 20px;
+        }
+        
+        .content {
+            text-align: center;
+            max-width: 900px;
+            padding: 50px 40px;
+            z-index: 2;
+            position: relative;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0, 102, 204, 0.15);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(0, 102, 204, 0.1);
+            margin-bottom: 30px;
+            width: 100%;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 30px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            line-height: 1.2;
+            color: var(--primary-color);
+            letter-spacing: -1px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid rgba(0, 102, 204, 0.3);
+        }
+        
+        .highlight {
+            position: relative;
+            display: inline-block;
+            padding: 0 10px;
+            z-index: 1;
+            color: var(--primary-color);
+        }
+        
+        .highlight::after {
+            content: "";
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            width: 100%;
+            height: 18px;
+            background: rgba(0, 102, 204, 0.15);
+            z-index: -1;
+            border-radius: 5px;
+            transform: skewX(-10deg);
+        }
+        
+        .tagline {
+            font-size: 1.9rem;
+            font-weight: 400;
+            line-height: 1.7;
+            margin: 30px auto;
+            color: #555;
+            max-width: 700px;
+            background: rgba(0, 102, 204, 0.05);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 102, 204, 0.1);
+            border: 1px solid rgba(0, 102, 204, 0.1);
+        }
+        
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 45px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn {
+            padding: 20px;
+            font-size: 1.4rem;
+            font-weight: 600;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 5px 15px rgba(0, 102, 204, 0.1);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            text-align: right;
+            justify-content: flex-start;
+        }
+        
+        .btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), transparent);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .btn:hover::before {
+            opacity: 1;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #b3d9ff 0%, var(--primary-color) 100%);
+            color: #fff;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+        
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 102, 204, 0.2);
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #c9e4ff 0%, var(--secondary-color) 100%);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(0, 102, 204, 0.05);
+        }
+        
+        .btn i {
+            font-size: 1.6rem;
+            min-width: 30px;
+            color: var(--primary-color);
+        }
+        
+        .contact-section {
+            margin-top: 40px;
+            padding: 25px;
+            background: rgba(0, 102, 204, 0.03);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 102, 204, 0.1);
+            border: 1px solid rgba(0, 102, 204, 0.1);
+            width: 100%;
+            max-width: 700px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            font-size: 1.5rem;
+            padding: 15px;
+            background: rgba(0, 102, 204, 0.03);
+            border-radius: 10px;
+        }
+        
+        .contact-map {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 20px;
+        }
+        
+        .map-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        
+        .map-link {
+            display: inline-block;
+            background: var(--primary-color);
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .map-link:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 3px 10px rgba(0, 102, 204, 0.2);
+        }
+        
+        .phone-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            direction: ltr;
+            display: inline-block;
+            padding: 5px 15px;
+            background: rgba(0, 102, 204, 0.05);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .phone-number:hover {
+            background: rgba(0, 102, 204, 0.1);
+            transform: scale(1.05);
+        }
+        
+        .social-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            border-bottom: 1px dashed var(--primary-color);
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            color: var(--secondary-color);
+            border-bottom: 1px solid var(--secondary-color);
+        }
+        
+        .copyright {
+            margin-top: 40px;
+            opacity: 0.7;
+            font-size: 1.1rem;
+            text-align: center;
+            padding: 15px;
+            border-top: 1px solid rgba(0, 102, 204, 0.1);
+            width: 100%;
+            color: #666;
+        }
+        
+        .about-section {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0, 102, 204, 0.1);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(0, 102, 204, 0.1);
+            max-width: 90%;
+            text-align: center;
+            margin-bottom: 40px;
+            width: 100%;
+            max-width: 800px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        .about-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid rgba(0, 102, 204, 0.3);
+        }
+        
+        .about-content {
+            font-size: 1.6rem;
+            line-height: 1.8;
+            text-align: right;
+            color: #555;
+            padding: 0 20px;
+        }
+        
+        .about-highlight {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        .mission-vision {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .mission, .vision {
+            flex: 1;
+            min-width: 300px;
+            background: rgba(0, 102, 204, 0.03);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid rgba(0, 102, 204, 0.1);
+            text-align: right;
+            transition: transform 0.3s ease;
+        }
+        
+        .mission:hover, .vision:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 102, 204, 0.1);
+        }
+        
+        .mission h3, .vision h3 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .mission p, .vision p {
+            font-size: 1.4rem;
+            line-height: 1.7;
+            color: #555;
+        }
+        
+        .partners-title {
+            margin-top: 50px;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            border-bottom: 2px solid rgba(0, 102, 204, 0.2);
+            padding-bottom: 15px;
+            display: inline-block;
+        }
+        
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+            padding: 20px;
+        }
+        
+        .partner-item {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 25px 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 102, 204, 0.1);
+            position: relative;
+            cursor: pointer;
+            animation: float 6s ease-in-out infinite;
+            box-shadow: 0 5px 15px rgba(0, 102, 204, 0.05);
+        }
+        
+        .partner-item:nth-child(2) { animation-delay: 0.5s; }
+        .partner-item:nth-child(3) { animation-delay: 1s; }
+        .partner-item:nth-child(4) { animation-delay: 1.5s; }
+        .partner-item:nth-child(5) { animation-delay: 2s; }
+        
+        .partner-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 102, 204, 0.1);
+            background: rgba(255, 255, 255, 1);
+        }
+        
+        .partner-icon {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            position: relative;
+        }
+        
+        .partner-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            text-align: center;
+            color: #333;
+        }
+        
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .popup.active {
+            display: flex;
+            opacity: 1;
+            animation: popupFadeIn 0.4s ease forwards;
+        }
+        
+        .popup-content {
+            background: linear-gradient(135deg, #ffffff 0%, var(--light-bg) 100%);
+            border-radius: 25px;
+            padding: 40px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+            border: 2px solid rgba(0, 102, 204, 0.3);
+            text-align: right;
+            transform: scale(0.8);
+            transition: transform 0.4s ease;
+            color: #333;
+        }
+        
+        .popup.active .popup-content {
+            transform: scale(1);
+        }
+        
+        .popup-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            border-bottom: 2px solid rgba(0, 102, 204, 0.2);
+            padding-bottom: 15px;
+        }
+        
+        .popup-title {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin: 0;
+        }
+        
+        .close-btn {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .close-btn:hover {
+            transform: rotate(90deg);
+            background: var(--secondary-color);
+        }
+        
+        .popup-body {
+            font-size: 1.6rem;
+            line-height: 1.8;
+            color: #555;
+        }
+        
+        .popup-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        
+        .popup-list li {
+            padding: 15px 10px;
+            border-bottom: 1px solid rgba(0, 102, 204, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: background 0.3s ease;
+        }
+        
+        .popup-list li:hover {
+            background: rgba(0, 102, 204, 0.05);
+            border-radius: 8px;
+        }
+        
+        .popup-list li i {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+        }
+        
+        .sub-list {
+            list-style-type: none;
+            padding-right: 30px;
+            margin-top: 10px;
+        }
+        
+        .sub-list li {
+            padding: 8px 0;
+            border-bottom: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .sub-list li:before {
+            content: "•";
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-left: 10px;
+        }
+        
+        .contact-note {
+            background: rgba(0, 102, 204, 0.05);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.5rem;
+        }
+        
+        /* تصميم خاص للطاقة المتجددة */
+        .renewable-popup .popup-content {
+            background: linear-gradient(135deg, #e6fff2 0%, #b3ffd9 100%);
+            border: 2px solid var(--accent-color);
+        }
+        
+        .renewable-popup .popup-header {
+            border-bottom: 2px solid rgba(0, 204, 102, 0.2);
+        }
+        
+        .renewable-popup .popup-title {
+            color: var(--accent-color);
+        }
+        
+        .renewable-popup .close-btn {
+            background: var(--accent-color);
+        }
+        
+        .renewable-popup .close-btn:hover {
+            background: #00b359;
+        }
+        
+        .renewable-icon {
+            background: linear-gradient(135deg, var(--accent-color), #00b359);
+            color: white;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2.5rem;
+            box-shadow: 0 5px 15px rgba(0, 204, 102, 0.3);
+        }
+        
+        .renewable-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .renewable-feature {
+            background: rgba(0, 204, 102, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            border: 1px solid rgba(0, 204, 102, 0.2);
+        }
+        
+        .renewable-feature i {
+            color: var(--accent-color);
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .tagline {
+                font-size: 1.4rem;
+                padding: 20px;
+            }
+            
+            .btn {
+                font-size: 1.2rem;
+                padding: 18px;
+            }
+            
+            .contact-item {
+                font-size: 1.2rem;
+            }
+            
+            .phone-number {
+                font-size: 1.5rem;
+            }
+            
+            .about-title {
+                font-size: 2.5rem;
+            }
+            
+            .about-content {
+                font-size: 1.4rem;
+            }
+            
+            .mission, .vision {
+                min-width: 100%;
+            }
+            
+            .partners-title {
+                font-size: 2rem;
+            }
+            
+            .partners-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                gap: 20px;
+            }
+            
+            .partner-item {
+                padding: 20px 10px;
+            }
+            
+            .partner-icon {
+                font-size: 2.8rem;
+            }
+            
+            .popup-content {
+                padding: 25px;
+            }
+            
+            .popup-title {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .tagline {
+                font-size: 1.1rem;
+                padding: 15px;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+            
+            .btn {
+                font-size: 1.1rem;
+                padding: 16px;
+            }
+            
+            .contact-item {
+                font-size: 1rem;
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .phone-number {
+                font-size: 1.3rem;
+            }
+            
+            .about-title {
+                font-size: 2rem;
+            }
+            
+            .about-content {
+                font-size: 1.2rem;
+                padding: 0 10px;
+            }
+            
+            .partners-title {
+                font-size: 1.8rem;
+            }
+            
+            .partners-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            
+            .popup-content {
+                padding: 20px;
+            }
+            
+            .popup-title {
+                font-size: 1.8rem;
+            }
+            
+            .popup-body {
+                font-size: 1.4rem;
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes popupFadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-20px);}
+            60% {transform: translateY(-10px);}
+        }
+        
+        .company-name {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+            text-align: center;
+            animation: pulse 2s infinite, float 3s infinite ease-in-out;
+            text-shadow: 0 3px 10px rgba(0, 102, 204, 0.2);
+            padding: 10px 30px;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 10px 25px rgba(0, 102, 204, 0.1);
+            display: inline-block;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 99;
+            box-shadow: 0 5px 15px rgba(0, 102, 204, 0.2);
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .back-to-top i {
+            font-size: 1.8rem;
+            color: #fff;
+        }
+        
+        .back-to-top:hover {
+            background: var(--secondary-color);
+            transform: translateY(-5px);
+        }
+        
+        .whatsapp-link, .facebook-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: #333;
+        }
+        
+        .whatsapp-link:hover, .facebook-link:hover {
+            transform: translateX(5px);
+            color: var(--primary-color);
+        }
+        
+        .map-container {
+            margin-top: 20px;
+            width: 100%;
+            height: 300px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 102, 204, 0.1);
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .contact-note a {
+            color: var(--primary-color);
+            text-decoration: none;
+            border-bottom: 1px dashed var(--primary-color);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .contact-note a:hover {
+            color: var(--secondary-color);
+            border-bottom: 1px solid var(--secondary-color);
+        }
+        
+        .contact-phone {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .scroll-target {
+            position: absolute;
+            top: -100px;
+        }
+        
+        /* تصميم الحماية المحسن */
+        .protection-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0, 102, 204, 0.1);
+            border: 1px solid rgba(0, 102, 204, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .protection-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 102, 204, 0.15);
+        }
+        
+        .protection-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .protection-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(0, 102, 204, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: var(--primary-color);
+        }
+        
+        .protection-title {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin: 0;
+        }
+        
+        .protection-features {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .protection-features li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(0, 102, 204, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.4rem;
+        }
+        
+        .protection-features li i {
+            color: var(--primary-color);
+        }
+        
+        .protection-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        /* تحسينات الحماية والأداء */
+        .security-badge {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: var(--primary-color);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            z-index: 100;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .performance-optimized {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--accent-color);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            z-index: 100;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+    </style>
+</head>
+<body>
+    <!-- اسم الشركة المتحرك -->
+    <div class="company-name">الفانوس للتجارة العامة</div>
+    
+    <!-- قسم "من نحن" -->
+    <div class="about-section">
+        <h2 class="about-title">من نحن</h2>
+        
+        <div class="about-content">
+            <p>
+                <span class="about-highlight">شركة الفانوس للتجارة العامة</span> هي إحدى الشركات العريقة في مجال حلول الطاقة والتجهيزات الكهربائية في عدن واليمن. نحن نتميز بفريق عمل محترف من المهندسين والفنيين ذوي الخبرة الواسعة في مجال الطاقة الكهربائية، حيث نسعى دائماً لتقديم أفضل الحلول التقنية التي تلبي احتياجات عملائنا في القطاعين الحكومي والخاص.
+            </p>
+            
+            <p>
+                نعمل على تطوير الكوادر الفنية والمهندسين المحليين من خلال برامج تدريبية متخصصة، ونشارك بفعالية في دعم وتطوير قطاع الكهرباء في اليمن. تعاوننا الوثيق مع مؤسسة الكهرباء الوطنية في عدن يمكّننا من تقديم حلول متكاملة وخدمات عالية الجودة.
+            </p>
+            
+            <p>
+                تتميز شركتنا بالثقة والموثوقية التي اكتسبناها على مدى سنوات من العمل الجاد والالتزام بأعلى معايير الجودة والسلامة. نعتز بكوننا جزءاً من المجتمع المحلي في عدن ونسهم في تطوير البنية التحتية الكهربائية في المنطقة.
+            </p>
+            
+            <div class="mission-vision">
+                <div class="mission">
+                    <h3><i class="fas fa-bullseye"></i> مهمتنا</h3>
+                    <p>
+                        تقديم حلول طاقة مبتكرة وموثوقة تلبي احتياجات العملاء مع الالتزام بأعلى معايير الجودة والسلامة. نسعى للإسهام في تطوير قطاع الطاقة الكهربائية في اليمن من خلال التعاون مع المؤسسات المحلية وتطوير الكوادر الوطنية.
+                    </p>
+                    <p>
+                        نركز على تقديم الدعم الفني والاستشارات المتخصصة للمشاريع الحكومية والخاصة، مع الحفاظ على البيئة والموارد الطبيعية. نلتزم بتقديم خدمات ما بعد البيع المتميزة لضمان رضا العملاء وبناء علاقات طويلة الأمد.
+                    </p>
+                </div>
+                
+                <div class="vision">
+                    <h3><i class="fas fa-eye"></i> رؤيتنا</h3>
+                    <p>
+                        أن نكون الخيار الأول للعملاء في مجال حلول الطاقة والتجهيزات الكهربائية في عدن واليمن، وأن نكون شركة رائدة معترف بها في السوق المحلي.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- المحتوى الرئيسي -->
+    <div class="content">
+        <h1><span class="highlight">حلول الطاقة</span> المتكاملة</h1>
+        
+        <div class="tagline">
+            شركاؤك الموثوقون في حلول الطاقة والتجهيزات الكهربائية المتكاملة في عدن واليمن
+        </div>
+        
+        <div class="cta-buttons">
+            <button class="btn btn-secondary" id="productsBtn">
+                <i class="fas fa-box-open"></i>
+                <span>صور المنتجات</span>
+            </button>
+            
+            <button class="btn btn-secondary" id="partnersBtn">
+                <i class="fas fa-handshake"></i>
+                <span>إنجازاتنا</span>
+            </button>
+        </div>
+        
+        <!-- قسم شركاؤنا -->
+        <h2 class="partners-title">المجالات التي نغطيها</h2>
+        <div class="partners-grid" id="partnersGrid">
+            <div class="partner-item" data-popup="national">
+                <div class="partner-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <div class="partner-name"> المحولات والكابلات</div>
+            </div>
+            <div class="partner-item" data-popup="manufacturer">
+                <div class="partner-icon">
+                    <i class="fas fa-industry"></i>
+                </div>
+                <div class="partner-name">وحدات الربط الحلقية</div>
+            </div>
+            <div class="partner-item" data-popup="electricity">
+                <div class="partner-icon">
+                    <i class="fas fa-plug"></i>
+                </div>
+                <div class="partner-name">مستلزمات الحماية</div>
+            </div>
+            <div class="partner-item" data-popup="solar">
+                <div class="partner-icon">
+                    <i class="fas fa-hard-hat"></i>
+                </div>
+                <div class="partner-name">هياكل البنية التحتية</div>
+            </div>
+            <!-- أيقونة الطاقة المتجددة الجديدة -->
+            <div class="partner-item" data-popup="renewable">
+                <div class="partner-icon" style="color: var(--accent-color);">
+                    <i class="fas fa-solar-panel"></i>
+                </div>
+                <div class="partner-name">الطاقة المتجددة</div>
+            </div>
+        </div>
+        
+        <div class="contact-section">
+            <div class="scroll-target" id="contact"></div>
+            <h2>تواصل معنا</h2>
+            <div class="contact-info">
+                <div class="contact-item contact-phone">
+                    <a href="https://wa.me/967777318904" class="whatsapp-link" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>واتساب: <span class="phone-number">7777318904</span></span>
+                    </a>
+                </div>
+                <div class="contact-item contact-phone">
+                    <a href="https://wa.me/967770398107" class="whatsapp-link" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>واتساب: <span class="phone-number">770398107</span></span>
+                    </a>
+                </div>
+                <div class="contact-item">
+                    <a href="https://www.facebook.com/profile.php?id=100079112491526" class="facebook-link" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                        <span>فيسبوك: صفحتنا على الفيسبوك</span>
+                    </a>
+                </div>
+                <div class="contact-item contact-map">
+                    <div class="map-title">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>الفرع الرئيسي: فرع شارع التسعين - عدن</span>
+                    </div>
+                    <a href="https://www.google.com/maps?q=Al-Sabahiya,+Aden,+Yemen" class="map-link" target="_blank">عرض الموقع على خرائط جوجل</a>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62150.61216041216!2d45.00315127122816!3d12.798592146684452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1607db0a7f6d7d0d%3A0x1f0c3d6f3c8e1c0d!2sAl-Sabahiya%2C%20Aden%2C%20Yemen!5e0!3m2!1sen!2s!4v1651234567890!5m2!1sen!2s" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                <div class="contact-item contact-map">
+                    <div class="map-title">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>فرع شارع الخمسين - عدن</span>
+                    </div>
+                    <a href="https://www.google.com/maps?q=Khamseen,+Aden,+Yemen" class="map-link" target="_blank">عرض الموقع على خرائط جوجل</a>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62145.26773410133!2d44.97845627122815!3d12.828868346684452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1607db0a7f6d7d0d%3A0x1f0c3d6f3c8e1c0d!2sKhamseen%2C%20Aden%2C%20Yemen!5e0!3m2!1sen!2s!4v1651234567890!5m2!1sen!2s" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- حقوق الملكية -->
+    <div class="copyright">
+        © 2025 الفانوس للتجارة العامة. جميع الحقوق محفوظة.
+    </div>
+    
+    <!-- زر العودة للأعلى -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    
+    <!-- شارات الحماية والأداء -->
+    <div class="security-badge">
+        <i class="fas fa-shield-alt"></i> موقع آمن ومحمي
+    </div>
+    
+    <div class="performance-optimized">
+        <i class="fas fa-tachometer-alt"></i> أداء ممتاز
+    </div>
+    
+    <!-- النوافذ المنبثقة -->
+    <div class="popup" id="productsPopup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3 class="popup-title">صور المنتجات</h3>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="popup-body">
+                <h4>سيتم رفع صور المنتجات لاحقًا</h4>
+                <p>نعمل حاليًا على تحديث معرض منتجاتنا ليكون أكثر شمولية وتفصيلاً.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="popup" id="partnersPopup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3 class="popup-title">إنجازاتنا</h3>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="popup-body">
+                <h4>سيتم رفع إنجازاتنا لاحقًا</h4>
+                <p>نعمل على تحديث قائمة إنجازاتنا لتشمل جميع مشاريعنا الناجحة.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="popup" id="nationalPopup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3 class="popup-title">الكابلات والمحولات</h3>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="popup-body">
+                <div class="fanar-section">
+                    <div class="header">
+                        <h1>محولات وكابلات <span class="highlight">الفنار</span></h1>
+                        <div class="intro">
+                            تقدم <span class="highlight">الفانوس للتجارة العامة</span> تشكيلة استثنائية من محولات وكابلات "الفنار" التي تُعد علامةً فارقة في عالم الجودة والكفاءة، بتغطية شاملة لكافة المقاسات والأحجام لتلبي متطلبات المشاريع الأكثر تعقيداً.
+                        </div>
+                    </div>
+                    
+                    <div class="products-container">
+                        <div class="product-card">
+                            <i class="fas fa-bolt"></i>
+                            <h2>محولات الفنار</h2>
+                            <p>حلول طاقة مبتكرة توفر كفاءة استثنائية وأداءً موثوقاً في مختلف الظروف التشغيلية.</p>
+                            <ul class="product-features">
+                                <li><i class="fas fa-check"></i> تصميم هندسي متطور</li>
+                                <li><i class="fas fa-check"></i> مواد خام عالية الجودة</li>
+                                <li><i class="fas fa-check"></i> كفاءة طاقة تصل إلى 98.5%</li>
+                                <li><i class="fas fa-check"></i> تصنيع وفق أعلى المعايير</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="product-card">
+                            <i class="fas fa-plug"></i>
+                            <h2>كابلات الفنار</h2>
+                            <p>حلول متكاملة تناسب التطبيقات الصناعية والتجارية والسكنية بمستويات حماية فائقة.</p>
+                            <ul class="product-features">
+                                <li><i class="fas fa-check"></i> تنوع في المقاسات والأحجام</li>
+                                <li><i class="fas fa-check"></i> تغطية كافة الفولتيات</li>
+                                <li><i class="fas fa-check"></i> حماية متقدمة ضد العوامل البيئية</li>
+                                <li><i class="fas fa-check"></i> مرونة عالية في التطبيقات</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="benefits">
+                        <h2>مزايا اختيار منتجات الفنار</h2>
+                        <div class="benefits-grid">
+                            <div class="benefit-item">
+                                <i class="fas fa-medal"></i>
+                                <div class="benefit-text">
+                                    <h3>جودة استثنائية</h3>
+                                    <p>موثوقية عالية مدعومة بمعايير التصنيع العالمية</p>
+                                </div>
+                            </div>
+                            
+                            <div class="benefit-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <div class="benefit-text">
+                                    <h3>ضمان طويل الأمد</h3>
+                                    <p>يصل إلى 25 سنة للمحولات مع دعم فني متكامل</p>
+                                </div>
+                            </div>
+                            
+                            <div class="benefit-item">
+                                <i class="fas fa-cogs"></i>
+                                <div class="benefit-text">
+                                    <h3>كفاءة مثبتة</h3>
+                                    <p>أداء فائق في المشاريع الكبرى والبنى التحتية</p>
+                                </div>
+                            </div>
+                            
+                            <div class="benefit-item">
+                                <i class="fas fa-handshake"></i>
+                                <div class="benefit-text">
+                                    <h3>دعم فني متخصص</h3>
+                                    <p>فرق هندسية مؤهلة لتقديم الحلول التقنية</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="commitment">
+                        <p>تلتزم <span class="highlight">الفانوس للتجارة العامة</span> بتقديم حلول طاقة متكاملة تجمع بين الجودة الفائقة والأداء المتميز لمنتجات الفنار، مع توفير الدعم الفني والاستشاري اللازم لضمان نجاح مشاريعكم على المدى الطويل.</p>
+                        <p class="highlight">توفير منتجات الفنار يتم عن طريق وكالة قمة المجد ممثلة بالمهندس أشرف الأثوري</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="popup" id="manufacturerPopup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3 class="popup-title">وحدات الربط الحلقية (RMU)</h3>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="popup-body">
+                <div class="rmu-section">
+                    <h2>وحدات الربط الحلقية (RMU) - حلول متكاملة</h2>
+                    <p>تقدم شركة <strong>الفانوس للتجارة العامة</strong> حلولاً متطورة لوحدات الربط الحلقية (RMU) من أبرز الشركات العالمية المتخصصة مثل <strong>أودي (Odi)</strong> و <strong>في إل (VL)</strong>، والتي تُعد الخيار الأمثل للشبكات الكهربائية الحديثة.</p>
+                    
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <i class="fas fa-compress-arrows-alt"></i>
+                            <h3>تصميم مدمج وفعال</h3>
+                            <p>يوفر مساحة تركيب أقل بنسبة 40% مقارنة بالوحدات التقليدية</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>عزل بالغاز (SF6)</h3>
+                            <p>يضمن أعلى مستويات السلامة والأداء في الظروف البيئية المختلفة</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <i class="fas fa-sync-alt"></i>
+                            <h3>مرونة تشغيلية</h3>
+                            <p>تسمح بالتحويل بين الدوائر الكهربائية دون انقطاع التيار</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <i class="fas fa-bolt"></i>
+                            <h3>نطاق جهد واسع</h3>
+                            <p>من 12 ك.ف. إلى 36 ك.ف. لتغطية كافة الاحتياجات</p>
+                        </div>
+                    </div>
+                    
+                    <div class="applications">
+                        <h3>تطبيقات عملية:</h3>
+                        <ul>
+                            <li><i class="fas fa-city"></i> شبكات التوزيع الحضرية</li>
+                            <li><i class="fas fa-industry"></i> المشاريع الصناعية الكبرى</li>
+                            <li><i class="fas fa-solar-panel"></i> أنظمة الطاقة المتجددة</li>
+                            <li><i class="fas fa-hard-hat"></i> البنى التحتية الحيوية</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="commitment">
+                        <p>تلتزم الفانوس للتجارة العامة بتقديم أحدث الحلول التقنية المدعومة بخبرة فنية متخصصة وخدمات ما بعد البيع المتميزة، لضمان كفاءة وأمان شبكاتكم الكهربائية على المدى الطويل.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="popup" id="electricityPopup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3 class="popup-title">مستلزمات الحماية</h3>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="popup-body">
+                <div class="protection-grid">
+                    <div class="protection-card">
+                        <div class="protection-header">
+                            <div class="protection-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3 class="protection-title">أنظمة الحماية المتكاملة</h3>
+                        </div>
+                        <ul class="protection-features">
+                            <li><i class="fas fa-check"></i> حلول حماية متقدمة للشبكات الكهربائية</li>
+                            <li><i class="fas fa-check"></i> تصميم وفق المعايير العالمية</li>
+                            <li><i class="fas fa-check"></i> كفاءة عالية في أداء الحماية</li>
+                            <li><i class="fas fa-check"></i> سهولة الصيانة والتركيب</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="protection-card">
+                        <div class="protection-header">
+                            <div class="protection-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <h3 class="protection-title">قواطع كهربائية ذكية</h3>
+                        </div>
+                        <ul class="protection-features">
+                            <li><i class="fas fa-check"></i> قواطع متطورة للتيار العالي</li>
+                            <li><i class="fas fa-check"></i> أنظمة تحكم رقمية متكاملة</li>
+                            <li><i class="fas fa-check"></i> مراقبة مستمرة لأداء الشبكة</li>
+                            <li><i class="fas fa-check"></i> استجابة فائقة للعطل الكهربائي</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="protection-card">
+                        <div class="protection-header">
+                            <div class="protection-icon">
+                                <i class="fas fa-plug"></i>
+                            </div>
+                            <h3 class="protection-title">نظم التأريض المتطورة</h3>
+                        </div>
+                        <ul class="protection-features">
+                            <li><i class="fas fa-check"></i> حلول تأريض متكاملة للشبكات</li>
+                            <li><i class="fas fa-check"></i> مواد عالية الجودة مقاومة للتآكل</li>
+                            <li><i class="fas fa-check"></i> تصميم هندسي دقيق</li>
+                            <li><i class="fas fa-check"></i> ضمان أقصى درجات الأمان</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="protection-card">
+                        <div class="protection-header">
+                            <div class="protection-icon">
+                                <i class="fas fa-microchip"></i>
+                            </div>
+                            <h3 class="protection-title">نظم المراقبة والتحكم</h3>
+                        </div>
+                        <ul class="protection-features">
+                            <li><i class="fas fa-check"></i> أنظمة مراقبة متقدمة 24/7</li>
+                            <li><i class="fas fa-check"></i> تقارير أداء مفصلة</li>
+                            <li><i class="fas fa-check"></i> تحذيرات فورية عند حدوث عطل</li>
+                            <li><i class="fas fa-check"></i> تحكم عن بعد في نظام الحماية</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="popup" id="solarPopup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3 class="popup-title">هياكل التثبيت الخشبية</h3>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="popup-body">
+                <div class="wood-section">
+                    <div class="header">
+                        <i class="fas fa-tree"></i>
+                        <h1>هياكل التثبيت <span class="highlight">الخشبية</span></h1>
+                        <p>تقدم <span class="highlight">الفانوس للتجارة العامة</span> هياكل خشبية عالية الجودة لتثبيت الأنظمة الكهربائية</p>
+                    </div>
+                    
+                    <div class="sizes-container">
+                        <div class="size-card">
+                            <div class="number">6m</div>
+                        </div>
+                        <div class="size-card">
+                            <div class="number">8m</div>
+                        </div>
+                        <div class="size-card">
+                            <div class="number">9m</div>
+                        </div>
+                        <div class="size-card">
+                            <div class="number">11m</div>
+                        </div>
+                    </div>
+                    
+                    <div class="features">
+                        <h3>مميزات هياكلنا الخشبية:</h3>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <i class="fas fa-tint"></i>
+                                <span>مقاومة عالية للرطوبة</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-wind"></i>
+                                <span>تحمل الظروف البيئية القاسية</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>مقاومة التآكل والملوحة</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-sun"></i>
+                                <span>تحمل أشعة الشمس المباشرة</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="commitment">
+                        <p>حلول مثالية للمناطق الساحلية والبيئات عالية الرطوبة والملوحة</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- نافذة الطاقة المتجددة الجديدة -->
+    <div class="popup renewable-popup" id="renewablePopup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3 class="popup-title">الطاقة المتجددة</h3>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="popup-body">
+                <div class="renewable-icon">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                
+                <h2 style="text-align: center; color: var(--accent-color);">نهجنا في مجال الطاقة المتجددة</h2>
+                
+                <p>في إطار سعينا الدائم لتقديم حلول طاقة متكاملة ومستدامة، بدأت <span class="highlight">الفانوس للتجارة العامة</span> في مواكبة التطورات العالمية في مجال الطاقة المتجددة، حيث نقدم الآن حلولاً متكاملة للطاقة الشمسية وطاقة الرياح.</p>
+                
+                <div class="renewable-features">
+                    <div class="renewable-feature">
+                        <i class="fas fa-sun"></i>
+                        <h3>حلول الطاقة الشمسية</h3>
+                        <p>أنظمة شمسية متكاملة للمنازل والشركات</p>
+                    </div>
+                    
+                    <div class="renewable-feature">
+                        <i class="fas fa-wind"></i>
+                        <h3>طاقة الرياح</h3>
+                        <p>توريد وتشغيل توربينات الرياح الصغيرة والمتوسطة</p>
+                    </div>
+                    
+                    <div class="renewable-feature">
+                        <i class="fas fa-battery-full"></i>
+                        <h3>أنظمة التخزين</h3>
+                        <p>بطاريات تخزين عالية الجودة للطاقة المتجددة</p>
+                    </div>
+                    
+                    <div class="renewable-feature">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>تحسين كفاءة الطاقة</h3>
+                        <p>حلول لخفض استهلاك الطاقة وزيادة الكفاءة</p>
+                    </div>
+                </div>
+                
+                <h3 style="margin: 20px 0 10px; color: var(--accent-color);">أهدافنا في مجال الطاقة المتجددة:</h3>
+                <ul>
+                    <li><i class="fas fa-check-circle" style="color: var(--accent-color);"></i> المساهمة في تحويل اليمن نحو مصادر طاقة مستدامة</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--accent-color);"></i> توفير حلول طاقة نظيفة بتكلفة مناسبة</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--accent-color);"></i> دعم القطاعات الحيوية بالطاقة المتجددة</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--accent-color);"></i> تدريب الكوادر المحلية على تقنيات الطاقة النظيفة</li>
+                </ul>
+                
+                <div class="commitment" style="margin-top: 25px; background: rgba(0, 204, 102, 0.1); padding: 15px; border-radius: 10px;">
+                    <p>نلتزم في <span class="highlight">الفانوس للتجارة العامة</span> بتقديم حلول طاقة متجددة تلبي أعلى معايير الجودة والكفاءة، مع التركيز على الاستدامة البيئية والتنمية المستدامة في اليمن.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // إدارة النوافذ المنبثقة
+        const popups = document.querySelectorAll('.popup');
+        const closeButtons = document.querySelectorAll('.close-btn');
+        
+        // فتح/إغلاق نافذة منتجاتنا
+        document.getElementById('productsBtn').addEventListener('click', function() {
+            togglePopup('productsPopup');
+        });
+        
+        // فتح/إغلاق نافذة إنجازاتنا
+        document.getElementById('partnersBtn').addEventListener('click', function() {
+            togglePopup('partnersPopup');
+        });
+        
+        // فتح/إغلاق نوافذ الشركاء عند الضغط على البطاقات
+        const partnerItems = document.querySelectorAll('.partner-item');
+        partnerItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const popupId = this.getAttribute('data-popup') + 'Popup';
+                togglePopup(popupId);
+            });
+        });
+        
+        // إغلاق جميع النوافذ عند النقر على زر الإغلاق
+        closeButtons.forEach(button => {
+            button.addEventListener('click', hideAllPopups);
+        });
+        
+        // إغلاق النافذة عند النقر خارج المحتوى (على الخلفية)
+        popups.forEach(popup => {
+            popup.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    hideAllPopups();
+                }
+            });
+        });
+        
+        // وظائف مساعدة
+        function togglePopup(id) {
+            const popup = document.getElementById(id);
+            if (popup) {
+                // إذا كانت النافذة مفتوحة، نغلقها
+                if (popup.classList.contains('active')) {
+                    popup.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                } else {
+                    // نغلق جميع النوافذ أولاً
+                    hideAllPopups();
+                    // ثم نفتح النافذة المطلوبة
+                    popup.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+            }
+        }
+        
+        function hideAllPopups() {
+            popups.forEach(popup => {
+                popup.classList.remove('active');
+            });
+            document.body.style.overflow = 'auto';
+        }
+        
+        // إدارة زر العودة للأعلى
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // إغلاق النوافذ عند الضغط على زر Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                hideAllPopups();
+            }
+        });
+        
+        // التمرير إلى قسم الاتصال
+        function scrollToContact() {
+            hideAllPopups();
+            setTimeout(function() {
+                document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+            }, 300);
+        }
+        
+        // إضافة تفاعل لروابط الواتساب
+        document.querySelectorAll('.whatsapp-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+        });
+        
+        // إضافة تفاعل لروابط الفيسبوك
+        document.querySelectorAll('.facebook-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+        });
+        
+        // تحسين تجربة المستخدم للهواتف
+        if ('ontouchstart' in window) {
+            document.body.classList.add('touch-device');
+        }
+        
+        // تحسين أداء الصفحة
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.body.classList.add('loaded');
+            }, 500);
+        });
+        
+        // تحسينات الحماية والأداء
+        // منع فتح القائمة السياقية (زر الماوس الأيمن)
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        // منع نسخ النصوص
+        document.addEventListener('copy', function(e) {
+            e.preventDefault();
+        });
+        
+        // منع سحب الصور
+        document.querySelectorAll('img').forEach(img => {
+            img.addEventListener('dragstart', function(e) {
+                e.preventDefault();
+            });
+        });
+    </script>
+</body>
+</html>
